@@ -1,0 +1,15 @@
+extends header
+
+block header
+    div.top-bar
+        h3.page-title
+            a.title-link(href="/", target="_self")= title
+    div.edit-body.list-body
+        ul.code-list
+            each item,i in results
+                li.item.clearfix
+                    span.sort-num #{i+1}、
+                    a.code-link(href="/edit/#{item.pid}", target="_blank") /edit/#{item.pid}
+                    span.create-time #{item.createTime}
+
+    include footer

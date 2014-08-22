@@ -1,0 +1,24 @@
+extends header
+
+block header
+    div.top-bar
+        h3.page-title
+            a.title-link(href="/", target="_self")= title
+    div.edit-body
+        input#J_PID(type="hidden", value="#{pid}")
+        div.code-edit
+            textarea#J_Editor.js-editor(placeholder="Editor") !{code}
+        div.code-edit.preview
+            iframe#J_CodePreview.if-preview(src="/preview/#{pid}")
+
+    include footer
+
+    script(src="/javascripts/jquery-1.11.1.min.js")
+    script(src="/libs/codemirror/lib/codemirror.js")
+    script(src="/libs/codemirror/mode/javascript/javascript.js")
+    script(src="/libs/codemirror/mode/css/css.js")
+    script(src="/libs/codemirror/mode/vbscript/vbscript.js")
+    script(src="/libs/codemirror/mode/xml/xml.js")
+    script(src="/libs/codemirror/mode/htmlmixed/htmlmixed.js")
+    script(src="/javascripts/home.js")
+

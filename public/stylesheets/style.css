@@ -1,0 +1,162 @@
+body, p, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font: 14px/1.5 "\5fae\8f6f\96c5\9ed1", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.CodeMirror {
+    height: 100%;
+}
+
+.CodeMirror-scroll {
+    font-size: 18px;
+}
+
+/* top-bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background-color: #333;
+}
+
+.top-bar .page-title {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.top-bar .title-link {
+    color: #fff;
+}
+
+/* edit-body */
+.edit-body {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #efefef;
+}
+
+.edit-body .code-edit {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    left: 0;
+    width: 50%;
+}
+
+.edit-body .preview {
+    right: 0;
+    left: auto;
+}
+
+.edit-body .if-preview {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #39f;*/
+}
+
+.home-body {
+    text-align: center;
+}
+
+.full-height,
+.main-links {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+
+.full-height {
+    height: 80%;
+}
+
+.main-links .home-link {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin: 0 15px;
+    width: 150px;
+    height: 240px;
+    text-align: center;
+    line-height: 240px;
+    font-size: 24px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-transition: border-color .3s ease-out, background-color .3s ease-out, color .3s ease-out;
+    -o-transition: border-color .3s ease-out, background-color .3s ease-out, color .3s ease-out;
+    transition: border-color .3s ease-out, background-color .3s ease-out, color .3s ease-out;
+}
+
+.main-links .home-link:hover {
+    border-color: #00B7FF;
+    /*background-color: #333;*/
+    /*color: #39f;*/
+}
+
+.code-list {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.code-list .item {
+    padding: 15px 20px;
+    background-color: #fff;
+}
+
+.code-list .item:nth-child(2n+1) {
+    background-color: #ddd;
+}
+
+.code-list .item .code-link,
+.code-list .item .sort-num {
+    float: left;
+}
+
+.code-list .item .create-time {
+    float: right;
+    color: #999;
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
