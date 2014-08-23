@@ -32,7 +32,8 @@ var dateFormat = function(date, formatStr) {
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('index', {
-        title: '在线代码编辑器'
+        title: '在线代码编辑器',
+        pagename: 'index'
     });
 });
 
@@ -89,6 +90,7 @@ router.get('/edit/:id', function(req, res) {
         } else {
             res.render('edit', {
                 title: '在线代码编辑器',
+                pagename: 'edit',
                 pid: rs[0].pid,
                 code: rs[0].code
             });
@@ -138,8 +140,49 @@ router.get('/list', function(req, res){
             });
         } else {
             res.render('list', {
-                title: "在线代码编辑器 - 代码列表",
+                title: '在线代码编辑器 - 代码列表',
+                pagename: 'list',
                 results: rs
+            });
+        }
+    });
+});
+
+router.get('/clone/:id', function(req, res) {
+    var pid = req.query["id"] || req.params["id"];
+    col.find({pid: pid}, function(err, rs){
+        if (err) {
+            throw err;
+            res.send({
+                "status": "failure",
+                "message": "Please try again later!"
+            });
+        } else {
+            var codeRecord = new col({
+                code: rs[0].code,
+                createTime: dateFormat(new Date(), '{Y}/{MM}/{DD} {hh}:{ii}:{ss}')
+            });
+            // console.log(codeRecord);
+            codeRecord.save(function(err){
+                if (err) {
+                    throw err;
+                    res.send({
+                        'status': 'failure',
+                        'message': 'Create Error, Please try again later!'
+                    });
+                } else {
+                    col.find({}, function(err, rs){
+                        if (err) {
+                            throw err;
+                            res.send({
+                                'status': 'failure',
+                                'message': 'Please try again!'
+                            });
+                        } else {
+                            res.redirect('/edit/' + rs[rs.length - 1].pid);
+                        }
+                    });
+                }
             });
         }
     });

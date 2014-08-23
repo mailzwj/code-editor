@@ -1,0 +1,13 @@
+div.top-bar.clearfix
+    h3.page-title
+        a.title-link(href="/", target="_self")= title
+    ul.top-nav
+        if (pagename != "index")
+            li.item
+                a.top-link(href="/", target="_self") 首页
+        if (pagename != "list")
+            li.item
+                a.top-link(href="/list", target="_self") 列表
+        if (pagename == "edit")
+            li.item
+                a.top-link(href="/clone/#{pid}", target="_self") 克隆

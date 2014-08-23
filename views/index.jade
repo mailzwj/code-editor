@@ -1,13 +1,11 @@
 extends header
 
 block header
-    div.top-bar
-        h3.page-title
-            a.title-link(href="/", target="_self")= title
+    include topbar
     div.edit-body.home-body
         span.full-height
         div.main-links
-            a.home-link.create-link(href="/create", target="_blank") 创建代码
-            a.home-link.list-link(href="/list", target="_blank") 查看列表
+            a.home-link.create-link(href="/create", target="_self") 创建代码
+            a.home-link.list-link(href="/list", target="_self") 查看列表
 
     include footer

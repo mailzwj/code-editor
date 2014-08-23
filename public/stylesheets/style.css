@@ -44,6 +44,7 @@ a {
 }
 
 .top-bar .page-title {
+    float: left;
     padding: 0 10px;
     height: 40px;
     line-height: 40px;
@@ -53,6 +54,23 @@ a {
 
 .top-bar .title-link {
     color: #fff;
+}
+
+.top-bar .top-nav {
+    float: right;
+    margin-right: 20px;
+}
+
+.top-bar .top-nav .item {
+    float: left;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.top-bar .top-nav .item:hover {
+    background-color: #000;
 }
 
 /* edit-body */
@@ -142,6 +160,19 @@ a {
 
 .code-list .item .code-link,
 .code-list .item .sort-num {
+    float: left;
+}
+
+.code-list .item .sort-num {
+    width: 5%;
+    text-align: center;
+}
+
+.code-list .item .code-link {
+    width: 20%;
+}
+
+.code-list .code-preview {
     float: left;
 }
 

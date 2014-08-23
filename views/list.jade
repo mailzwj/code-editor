@@ -1,15 +1,19 @@
 extends header
 
 block header
-    div.top-bar
-        h3.page-title
-            a.title-link(href="/", target="_self")= title
+    include topbar
     div.edit-body.list-body
         ul.code-list
+            li.item.clearfix
+                span.sort-num 序号
+                span.code-link 编辑
+                span.code-preview 预览
+                span.create-time 时间
             each item,i in results
                 li.item.clearfix
-                    span.sort-num #{i+1}、
-                    a.code-link(href="/edit/#{item.pid}", target="_blank") /edit/#{item.pid}
+                    span.sort-num #{i+1}
+                    a.code-link(href="/edit/#{item.pid}", target="_self") /edit/#{item.pid}
+                    a.code-preview(href="/preview/#{item.pid}", target="_blank") /preview/#{item.pid}
                     span.create-time #{item.createTime}
 
     include footer

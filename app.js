@@ -26,6 +26,7 @@ app.use('/edit/:id', routes);
 app.use('/save', routes);
 app.use('/preview/:id', routes);
 app.use('/list', routes);
+app.use('/clone/:id', routes);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

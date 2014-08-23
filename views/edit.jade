@@ -1,9 +1,7 @@
 extends header
 
 block header
-    div.top-bar
-        h3.page-title
-            a.title-link(href="/", target="_self")= title
+    include topbar
     div.edit-body
         input#J_PID(type="hidden", value="#{pid}")
         div.code-edit
