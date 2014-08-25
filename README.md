@@ -9,8 +9,8 @@ Home [http://editor.jd-app.com/](http://editor.jd-app.com/)
 
 ### Install
 
-* Download and install MongoDB
-* Download and install Node.js
+* Download and install [MongoDB](https://www.mongodb.org/downloads)
+* Download and install [Node.js](http://nodejs.org/download/)
 
 ### Run
 
