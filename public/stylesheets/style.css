@@ -81,6 +81,7 @@ a {
     bottom: 0;
     left: 0;
     background-color: #efefef;
+    overflow: scroll;
 }
 
 .edit-body .code-edit {
@@ -190,4 +191,5 @@ a {
     height: 40px;
     line-height: 40px;
     text-align: center;
+    background-color: #efefef;
 }
